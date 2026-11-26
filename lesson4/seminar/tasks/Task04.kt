@@ -9,11 +9,22 @@ package seminar4
  * Примеры: " 5 " → 5, null → EventConfigException, "abc" → EventConfigException с cause.
  * Вопрос: почему missingCapacity() возвращает Nothing, а не Unit или Nothing?
  */
-fun readCapacity(raw: String?): Int {}
+fun readCapacity(raw: String?): Int {
+    val txt = raw?.trim() ?: missingCapacity()
+    if(txt.isEmpty()) missingCapacity()
+    val cap = try {
+        txt.toInt()
+    } catch (e:NumberFormatException) {
+        throw EventConfigException("Лимит не целое число")
+    }
+    if (cap<=0) throw EventConfigException("Лимит должен быть+")
+    return cap
+}
 // Готовые вспомогательные объявления для задачи 4. Менять их не нужно.
 class EventConfigException(message: String, cause: Throwable? = null) : IllegalStateException(message, cause)
 
 fun missingCapacity(): Nothing = throw EventConfigException("Лимит мест не указан")
+
 
 /*
  * 4б. Что произойдёт в finally?

@@ -7,12 +7,10 @@ package seminar4
  * Попробуй использовать безопасный вызов ?. и оператор Элвиса ?:, без !!.
  */
 fun displayName(name: String?): String {
-    if (name == null || name.isBlank()) {
-        return "Гость"
-    }
+    val tr = name?.trim() ?: return "Гость"
 
 
 
-    return name.trim()
+    return tr.ifEmpty() {"Гость"}
 }
 
