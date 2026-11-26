@@ -14,3 +14,9 @@ fun displayName(name: String?): String {
     return tr.ifEmpty() {"Гость"}
 }
 
+fun main() {
+    println("Задача 01: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // println(displayName("  Аня  "))
+}
+

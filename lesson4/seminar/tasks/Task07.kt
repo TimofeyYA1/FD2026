@@ -24,3 +24,12 @@ class RegistrationDraft {
     fun editEmail(value: String?): Unit = TODO()
     fun submit(): Registration = TODO()
 }
+
+fun main() {
+    println("Задача 07: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // val draft = RegistrationDraft()
+    // draft.editName("Аня")
+    // draft.editEmail("anya@example.test")
+    // println(draft.submit())
+}

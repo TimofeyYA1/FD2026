@@ -8,4 +8,10 @@ package seminar4
  * Примеры: (null, 3) → "Неверное количество мест", (4, 3) → "Мест не хватает",
  * (3, 3) → "Зарегистрирован". Повтори smart cast после проверки на null.
  */
-fun registrationStatus(requested: Int?, remaining: Int): String {}
+fun registrationStatus(requested: Int?, remaining: Int): String = error("Задача 5 пока не решена")
+
+fun main() {
+    println("Задача 05: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // println(registrationStatus(3, 3))
+}

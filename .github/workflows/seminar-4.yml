@@ -3,10 +3,12 @@ name: Семинар 4
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -30,7 +32,25 @@ jobs:
           distribution: temurin
           java-version: '26'
       - name: Сборка и запуск
-        run: ./System/gradlew -p System --no-daemon --console=plain -q :seminar-4:test --tests '*${{ matrix.suite }}'
+        env:
+          SUITE: ${{ matrix.suite }}
+        run: ./gradlew --no-daemon --console=plain -q :seminar-4:test --tests "*$SUITE"
       - name: Результаты тестов
         if: ${{ !cancelled() }}
         run: python3 .github/scripts/results.py '${{ matrix.suite }}'
+
+  windows-smoke:
+    name: Windows · запуск и сборка тестов
+    runs-on: windows-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '26'
+      - name: Запустить примеры и собрать тесты
+        shell: pwsh
+        run: .\gradlew.bat --no-daemon --console=plain :seminar-4:runTask01 :seminar-4:runTask09 :seminar-4:testClasses

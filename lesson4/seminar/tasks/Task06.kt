@@ -23,3 +23,9 @@ package seminar4
 class VenueSettings(private val defaultCapacity: String?) {
     fun capacityFor(organizerLimit: Any?): Int = TODO()
 }
+
+fun main() {
+    println("Задача 06: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // println(VenueSettings("30").capacityFor(null))
+}

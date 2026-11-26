@@ -16,3 +16,9 @@ fun parseSeats(raw: Any?): Int? {
     }
     return if (s>0) s else null
 }
+
+fun main() {
+    println("Задача 02: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // println(parseSeats(" 2 "))
+}

@@ -15,3 +15,10 @@ fun normalizeEmail(raw: String?): String? {
     if(at<= 0|| at = email.lastIndex || at != email.lastIndexOf('@')) return null
     return email
 }
+
+fun main() {
+    println("Задача 03: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // println(normalizeEmail("  anya@example.test  "))
+}
+

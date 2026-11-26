@@ -34,3 +34,13 @@ class TicketCheckException(message: String, cause: Throwable) : RuntimeException
 class TicketInspector {
     fun inspect(reader: TicketReader): String? = TODO()
 }
+
+fun main() {
+    println("Задача 08: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // val reader = object : TicketReader {
+    // override fun readCode(): String = "  A-17  "
+    // override fun close() {}
+    // }
+    // println(TicketInspector().inspect(reader))
+}
