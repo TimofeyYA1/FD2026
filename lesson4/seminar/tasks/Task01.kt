@@ -7,9 +7,9 @@ package seminar4
  * Попробуй использовать безопасный вызов ?. и оператор Элвиса ?:, без !!.
  */
 fun displayName(name: String?): String {
-    val newname=name?.trim()
-    if (newname.isNullOrBlank()){
+    val new_name=name?.trim()
+    if (new_name.isNullOrBlank()){
         return "Гость"
     }
-    return newname
+    return new_name
 }
