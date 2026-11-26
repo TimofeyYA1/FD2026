@@ -9,7 +9,7 @@ package seminar4
  * Примеры: " 5 " → 5, null → EventConfigException, "abc" → EventConfigException с cause.
  * Вопрос: почему missingCapacity() возвращает Nothing, а не Unit или Nothing?
  */
-fun readCapacity(raw: String?): Int {}
+fun readCapacity(raw: String?): Int = error("Задача 4 пока не решена")
 // Готовые вспомогательные объявления для задачи 4. Менять их не нужно.
 class EventConfigException(message: String, cause: Throwable? = null) : IllegalStateException(message, cause)
 

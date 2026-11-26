@@ -8,4 +8,4 @@ package seminar4
  * Примеры: "  Anna@demo.test " → "Anna@demo.test", "anna" → null, null → null.
  * Подсказка: начать можно с `val email = raw?.trim() ?: return null`.
  */
-fun normalizeEmail(raw: String?): String? {}
+fun normalizeEmail(raw: String?): String? = error("Задача 3 пока не решена")

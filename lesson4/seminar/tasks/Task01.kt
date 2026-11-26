@@ -13,3 +13,4 @@ fun displayName(name: String?): String {
     }
     return new_name
 }
+fun displayName(name: String?): String = error("Задача 1 пока не решена")

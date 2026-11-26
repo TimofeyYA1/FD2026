@@ -6,4 +6,4 @@ package seminar4
  * Если число получить нельзя, верни null. Попробуй when, is и toIntOrNull().
  * Примеры: 3 → 3, " 2 " → 2, 2L → null, "0" → null, "пять" → null.
  */
-fun parseSeats(raw: Any?): Int? {}
+fun parseSeats(raw: Any?): Int? = error("Задача 2 пока не решена")
