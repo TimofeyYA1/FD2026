@@ -9,3 +9,9 @@ package seminar4
  * Если места есть, верните Booked с остатком после брони. Иначе верните SoldOut.
  * Примеры: 3 → Booked(2), 1 → Booked(0), 0 → SoldOut.
  */
+
+fun main() {
+    println("Задача 09: Kotlin запущен")
+    // После решения раскомментируйте пример ниже.
+    // println(bookTicket(1))
+}
