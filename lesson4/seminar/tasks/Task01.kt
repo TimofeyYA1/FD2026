@@ -6,4 +6,13 @@ package seminar4
  * Примеры: "  Аня  " → "Аня", null → "Гость", "   " → "Гость".
  * Попробуй использовать безопасный вызов ?. и оператор Элвиса ?:, без !!.
  */
-fun displayName(name: String?): String {}
+fun displayName(name: String?): String {
+    val temp = name?.isNotEmpty() ?: return "Гость"
+    return temp
+}
+
+fun main(){
+    println(displayName("67"))
+    println(displayName("     "))
+    println(displayName(null))
+}
